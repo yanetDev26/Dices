@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dises" id="nsq-7o-WMa">
-                                <rect key="frame" x="76" y="306" width="241" height="239"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dises" id="nsq-7o-WMa">
+                                <rect key="frame" x="75" y="306" width="242" height="239"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -31,7 +31,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Dises" width="166.66667175292969" height="166.66667175292969"/>
+        <image name="dises" width="166.66667175292969" height="166.66667175292969"/>
         <namedColor name="FourthColor">
             <color red="1" green="0.88235294117647056" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
