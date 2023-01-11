@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,14 +17,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dises" id="dz3-sL-9D9">
-                                <rect key="frame" x="76" y="306" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LasVegas" translatesAutoresizingMaskIntoConstraints="NO" id="SV0-0s-Ofx">
+                                <rect key="frame" x="15" y="68.999999999999986" width="363" height="151.66666666666663"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUr-H1-rPM">
+                                <rect key="frame" x="50" y="755.66666666666663" width="293" height="42.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title=" PLAY" cornerStyle="large">
+                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="medium"/>
+                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="PrimaryColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playButtton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fP-v9-cEU"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wi8-Rn-d7V">
+                                <rect key="frame" x="50" y="300.66666666666669" width="293" height="120"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="One" translatesAutoresizingMaskIntoConstraints="NO" id="CUs-rf-Kjb">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="47j-V8-gtm"/>
+                                            <constraint firstAttribute="height" constant="120" id="jip-GY-rAN"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="One" translatesAutoresizingMaskIntoConstraints="NO" id="29l-NQ-jex">
+                                        <rect key="frame" x="173" y="0.0" width="120" height="120"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="IUR-sk-oJA"/>
+                                            <constraint firstAttribute="height" constant="120" id="vJq-ev-Qap"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="29l-NQ-jex" firstAttribute="top" secondItem="Wi8-Rn-d7V" secondAttribute="top" id="6ww-U9-gac"/>
+                                    <constraint firstItem="CUs-rf-Kjb" firstAttribute="top" secondItem="Wi8-Rn-d7V" secondAttribute="top" id="b3v-xY-WID"/>
+                                    <constraint firstAttribute="bottom" secondItem="CUs-rf-Kjb" secondAttribute="bottom" id="cC6-8A-Rju"/>
+                                    <constraint firstAttribute="bottom" secondItem="29l-NQ-jex" secondAttribute="bottom" id="tcu-vj-Tmg"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="FourthColor"/>
+                        <color key="backgroundColor" name="ThirdColor"/>
+                        <constraints>
+                            <constraint firstItem="SV0-0s-Ofx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="0vl-62-XuP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wi8-Rn-d7V" secondAttribute="trailing" constant="50" id="91E-pb-gNF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FUr-H1-rPM" secondAttribute="bottom" constant="20" id="DxQ-Sf-yJa"/>
+                            <constraint firstItem="SV0-0s-Ofx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="HU3-gh-YKk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FUr-H1-rPM" secondAttribute="trailing" constant="50" id="RQ3-n3-JX3"/>
+                            <constraint firstItem="FUr-H1-rPM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="edG-x9-UxC"/>
+                            <constraint firstItem="Wi8-Rn-d7V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="eqq-bx-JPL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SV0-0s-Ofx" secondAttribute="trailing" constant="15" id="fZ1-BI-u6c"/>
+                            <constraint firstItem="Wi8-Rn-d7V" firstAttribute="top" secondItem="SV0-0s-Ofx" secondAttribute="bottom" constant="80.000000000000057" id="zDN-d9-SW8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceOneImageView" destination="CUs-rf-Kjb" id="fki-B8-Jeg"/>
+                        <outlet property="diceTwoImageView" destination="29l-NQ-jex" id="oEk-Qd-JbQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -31,9 +95,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Dises" width="166.66667175292969" height="166.66667175292969"/>
-        <namedColor name="FourthColor">
-            <color red="1" green="0.88235294117647056" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="LasVegas" width="212.33332824707031" height="151.66667175292969"/>
+        <image name="One" width="266.66665649414062" height="266.66665649414062"/>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <namedColor name="PrimaryColor">
+            <color red="0.69019607843137254" green="0.11764705882352941" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ThirdColor">
+            <color red="0.95686274509803926" green="0.61568627450980395" blue="0.10196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
